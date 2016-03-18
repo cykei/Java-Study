@@ -5,7 +5,7 @@ public abstract class Duck{
   QuackBehavior quackBehavior;
   
   public Duck(){}
-  public void setFlyBehavior (FlyBehavior fb){
+  public void setFlyBehaivor (FlyBehavior fb){
     flyBehavior = fb;
   }
  public void setQuackBehavior(QuackBehavior qb) { 
