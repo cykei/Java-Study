@@ -18,9 +18,6 @@ class TurtleMouseListener extends Turtle {
         forward(d); // 받아온 거리만큼 전진합니다.
         setStatusText("moving to"+p.toString());
       }
-      public void mouseReleased(MouseEvent e){
-        setStatusText("releasing now");
-      }
     });
     addMouseMotionListener(new MouseMotionAdapter() {
       public void mouseDragged(MouseEvent e) {
@@ -29,7 +26,12 @@ class TurtleMouseListener extends Turtle {
         moveTo(p); //지나간 궤적을 지워주는 편리한 move함수
         setStatusText("dragging to " +p.toString());
       }
-      });
+      public void mouseReleased(MouseEvent e){
+	Point2D.Double r;
+	r=toTurtlePos(e.getPoint());
+	moveTo(r);
+	setStatusText("releasing to " +p.toString());
+    });
   }
 }
 public class TurtleMouseObserverMain{
