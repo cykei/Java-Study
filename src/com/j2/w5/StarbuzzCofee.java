@@ -1,6 +1,6 @@
 package com.j2.w5;
 
-abstract class Beverage{ //abstract로 하는 이유 : decorator에서 기능 구현을 하기위해서는 abtract(supper class)에 있는 함수만을 쓸 수 있습니다. 그래서 decorator에서 재정의해서 써줍니다. 
+abstract class Beverage{//abstract로 하는 이유 : decorator에서 기능 구현을 하기위해서는 abtract(supper class)에 있는 함수만을 쓸 수 있습니다. 그래서 decorator에서 재정의해서 써줍니다. 
   String description="Unknown beverage";
   public String getDescription() {
     return description;
@@ -63,4 +63,4 @@ public class StarbuzzCofee{
     System.out.println(wmd.getDescription());
     System.out.println(wmd.cost());
 }
-}
+}//재 커밋.
