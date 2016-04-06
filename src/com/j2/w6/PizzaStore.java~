@@ -1,0 +1,15 @@
+package com.j2.w6;
+
+public class PizzaStore {
+  SimplePizzaFactory factory;
+  public PizzaStore(SimplePizzaFactory factory){
+    this.factory
+  }
+  public Pizza orderPizza(String type){
+    Pizza pizza=null;
+    pizza=factory.createPizza(type)
+    pizza.prepare();
+    pizza.bake();
+    pizza.cut();
+  }
+}
