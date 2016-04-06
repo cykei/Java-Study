@@ -5,12 +5,12 @@ public class PizzaTestDrive{
     SimplePizzaFactory factory = new SimplePizzaFactory();
     PizzaStore store = new PizzaStore(factory);
     
-    Pizza pizza = store.orderPizza("cheese"); //orderPizza는 store의 getInstance 함수.
-    System.out.println("You ordered a " +pizza.getName() + "\n");
-    System.out.println(pizza);
+    Pizza cpizza = store.orderPizza("cheese"); //orderPizza는 store의 getInstance 함수.
+    System.out.println("You ordered a " +cpizza.getName() + "\n");
+    System.out.println(cpizza);
     
-    Pizza pizza= store.orderPizza("veggie");
-    System.out.println("You ordered a " +pizza.getName() + "\n");
-    System.out.println(pizza);
+    Pizza vpizza= store.orderPizza("veggie");
+    System.out.println("You ordered a " +vpizza.getName() + "\n");
+    System.out.println(vpizza);
   }
 }
