@@ -1,0 +1,16 @@
+package com.j2.w7;
+
+public class SingletonThread{ //thread문제해결방식 2 . (thread 방식)
+  private static Singleton uniqueInstance;
+  private static int numCalled=0; 
+  private Singleton(){}
+  public static synchronized Singleton getInstance(){
+    if(uniqueInstance==null){
+      uniqueInstance=new Singleton();
+    }
+    numCalled++;
+    System.out.println("numCalled: " +numCalled);
+    return uniqueInstance;
+  }
+}
+  
