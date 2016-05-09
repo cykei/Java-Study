@@ -1,0 +1,12 @@
+package com.j2.w10;
+
+public class RemoteControlTestV2{
+  public static void main(String[]args){
+    RemoteControlWithUndo remote = new  RemoteControlWithUndo();
+    LightUndo light =new LightUndo();
+    LightOnCommand lightOn = new LightOnCommand(light);
+    remote.setCommand(0,lightOn,offCommand);
+    remote.onButtonWasPushed(0);
+    remote.offButtonWasPushed(0);
+  }
+}
