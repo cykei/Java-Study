@@ -5,8 +5,8 @@ public class Waitress{ //이게 main함수 같은 녀석임.
   DinerMenu dm;
   
   public Waitress(PancakeHouseMenu p, DinerMenu d){
-    this.phm=p;
-    this.dm=d;
+    phm=p;
+    dm=d;
   }
   public void printMenu(){
      Iterator pi = phm.createIterator();
@@ -18,7 +18,7 @@ public class Waitress{ //이게 main함수 같은 녀석임.
       
         while (iterator.hasNext()) {
             MenuItem menuItem = (MenuItem)iterator.next();
-            System.out.print(menuItem.getName());
+            System.out.print(menuItem.getName()+",");
         }
     }
   //public static void main(String[]args){

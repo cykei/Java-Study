@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class PancakeHouseMenu implements Menu{
   
-  ArrayList menuItems;
+  ArrayList<MenuItem> menuItems;
   
     public PancakeHouseMenu() {
-        menuItems=new ArrayList();
+        menuItems=new ArrayList<MenuItem>();
         
         addItem("Vegetarian BLT",
                 "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
@@ -20,7 +20,7 @@ public class PancakeHouseMenu implements Menu{
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         menuItems.add(menuItem);
     }
-    public ArrayList getMenuItems() {
+    public ArrayList<MenuItem> getMenuItems() {
         return menuItems;
     }
     public Iterator createIterator(){

@@ -1,15 +1,15 @@
-package com.j2.w12.iterator.after;
+package com.j2.w12.iterator.case_extention;
 
 import java.util.ArrayList;
 
 public class PancakeHouseMenuIterator implements Iterator {
-    ArrayList<MenuItem> items;
+    ArrayList items;
     int position = 0;
-    public PancakeHouseMenuIterator(ArrayList<MenuItem> items) {
+    public PancakeHouseMenuIterator(ArrayList items) {
         this.items = items;
     }
     public Object next() {
-        Object object = items.get(position);// upcasting이기대문에 items앞에 (Object)를 안붙여도 된다. 자동으로 됨.
+        Object object = items.get(position);
         position = position + 1;
         return object;
     }
